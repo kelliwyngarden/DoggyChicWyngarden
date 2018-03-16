@@ -1,0 +1,23 @@
+@charset "ISO-8859-1";
+
+h1 {
+	text-align: center;
+	font-family: 'Tangerine', 'Arial Black', 'Times New Roman';
+	font-size: 500px;
+	font-style: bold;
+	color: blue;
+}
+
+body {
+	text-align: center;
+}
+a {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+img {
+	text-align: center;
+}

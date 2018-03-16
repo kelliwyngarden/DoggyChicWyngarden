@@ -70,6 +70,11 @@ public class viewAppointmentServlet extends HttpServlet {
 			Services service = sh.searchForServiceByAppointment(appointment);
 			Customer customer = ch.searchForCustomerByPet(pet);
 			
+			getServletContext().setAttribute("selectedAppointment", appointment);
+			getServletContext().setAttribute("selectedPet", pet);
+			getServletContext().setAttribute("selectedService", service);
+			getServletContext().setAttribute("selectedCustomer", customer);
+			
 			request.setAttribute("appointment", appointment);
 			request.setAttribute("pet", pet);
 			request.setAttribute("service", service);

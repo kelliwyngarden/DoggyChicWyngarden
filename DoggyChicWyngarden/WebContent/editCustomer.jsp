@@ -1,21 +1,19 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>New Customer Information</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Change Customer Information</title>
 </head>
 <h1>Doggy Chic</h1>
 <body>
-	<form action = "setCustomerServlet" method = "post">
-		<div>
-			Enter customer name: <input type = "text" name = "firstName" placeholder = "First">
-			<input type = "text" name = "lastName" placeholder = "Last">
-		</div>
-		<br/>
-		<div>
-			Enter customer address: <input type = "text" name = "address" placeholder = "Street address">
-			<input type = "text" name = "city" placeholder = "City">
-			<select name = "state">
+	<form action = "editAppointmentServlet" method = "post">
+	Name: <input type = "text" name = "firstName" value = "${customerToEdit.firstName}">
+		<input type = "text" name = "lastName" value = "${customerToEdit.lastName}"><br/>
+	Street Address: <input type = "text" name = "address" value = "${customerToEdit.address}"><br/>
+	City: <input type = "text" name = "city" value = "${customerToEdit.city}"><br/>
+	State: <select name = "state">
 				<option value="" selected disabled hidden>State</option>
 				<option value="AL">Alabama</option>
 				<option value="AK">Alaska</option>
@@ -68,15 +66,11 @@
 				<option value="WV">West Virginia</option>
 				<option value="WI">Wisconsin</option>
 				<option value="WY">Wyoming</option>
-			</select>
-			<input type="text" name = "zip" pattern="[0-9]{5}" placeholder = "Zip">
-		</div>
-		<br/>
-		<div>
-			Enter customer phone number: <input type = "tel" name = "phoneNumber" placeholder = "XXX-XXX-XXXX">
-		</div>
-		<br/>
-		<input type = "submit" value = "Submit" name = "doThisToItem">
+			</select><br/>
+	Zip Code (five-digit): <input type="text" name = "zip" value = "${customerToEdit.zip}"><br/>
+	Phone Number (no hyphens): <input type = "text" name = "phoneNumber" value = "${customerToEdit.phoneNumber}"><br/>
+	<input type = "hidden" name = "id" value = "${customerToEdit.id}">
+	<input type = "submit" value = "Save Customer Information" name = "doThisToItem">
 	</form>
 </body>
 </html>

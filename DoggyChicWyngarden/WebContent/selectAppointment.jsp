@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Select Your Appointment</title>
 </head>
+<h1>Doggy Chic</h1>
 <body>
 	<p>Please select appointment to view:</p>
 	<form method = "post" action = "viewAppointmentServlet">

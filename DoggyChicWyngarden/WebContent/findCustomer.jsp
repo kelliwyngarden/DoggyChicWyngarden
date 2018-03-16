@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Customer Information</title>
 </head>
+<h1>Doggy Chic</h1>
 <body>
 	<p>Please select correct customer:</p>
 	<form method = "post" action = "setCustomerServlet">
