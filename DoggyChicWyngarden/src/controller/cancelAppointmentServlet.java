@@ -1,27 +1,23 @@
 package controller;
 
 import java.io.IOException;
-import java.util.List;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.Customer;
-
 /**
- * Servlet implementation class findCustomerServlet
+ * Servlet implementation class cancelAppointmentServlet
  */
-@WebServlet("/findCustomerServlet")
-public class findCustomerServlet extends HttpServlet {
+@WebServlet("/cancelAppointmentServlet")
+public class cancelAppointmentServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public findCustomerServlet() {
+    public cancelAppointmentServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -39,21 +35,14 @@ public class findCustomerServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String act = request.getParameter("doThisToAppt");
-		if(act == null) {
-			//no button has been selected
-			getServletContext().getRequestDispatcher("/findCustomer.html").forward(request, response);
-		} else if (act.equals("Back to Menu")) {
+		String act = request.getParameter("doThisToItem");
+		if (act == null) {
+			getServletContext().getRequestDispatcher("/cancelAppointmentServlet").forward(request, response);
+		}else if (act.equals("Back to Menu")) {
 			getServletContext().getRequestDispatcher("/index.html").forward(request, response);
-		} else if (act.equals("Submit")) {
-			String lastName = request.getParameter("lastName");
-			CustomerHelper ch = new CustomerHelper();
-			List<Customer> list = ch.searchForCustomerByName(lastName);
-			request.setAttribute("matchingCustomers", list);
-			if(list.isEmpty()) {
-				request.setAttribute("matchingCustomers", " ");
-			}
-			getServletContext().getRequestDispatcher("/findCustomer.jsp").forward(request, response);
+		} else if (act.equals("New Appointment")) {
+			getServletContext().getRequestDispatcher("/startAppointment.html").forward(request, response);
 		}
 	}
+
 }

@@ -3,15 +3,26 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Find Appointment</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Satisfy">
 </head>
 <h1>Doggy Chic</h1>
 <body>
 	<form action = "viewAppointmentServlet" method = "post">
+		<div class = "form">
 		Enter customer last name: <input type = "text" name = "lastName" placeholder = "Last">
 		Enter pet name: <input type = "text" name = "petName" placeholder = "Pet">
+		</div>
 		<br/>
+		<div class = "link-button">
 		<input type = "submit" value = "Submit" name = "doThisToAppt">
+		</div>
+		<div class = "link-button">
 		<input type = "submit" value = "Back to Menu" name = "doThisToAppt">
+		</div>
+		<div class = "page-image">
+		<img src = "images/dogGroup2.jpg">
+		</div>
 	</form>
 </body>
 </html>

@@ -6,11 +6,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Customer Information</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Satisfy">
 </head>
 <h1>Doggy Chic</h1>
 <body>
-	<p>Please select correct customer:</p>
 	<form method = "post" action = "setCustomerServlet">
+	<div class = "form">
+	<p>Please select correct customer:</p>
 	<table>
 	<c:forEach items = "${requestScope.matchingCustomers}" var = "currentcustomer">
 	<tr>
@@ -21,8 +24,17 @@
 	</tr>
 	</c:forEach>
 	</table>
+	</div>
+	<br/>
+	<div class = "link-button">
 	<input type = "submit" value = "Select Customer" name = "doThisToItem">
+	</div>
+	<div class = "link-button">
 	<input type = "submit" value = "New Customer" name = "doThisToItem">
+	</div>
+	<div class = "page-image">
+	<img src = "images/dogGroup2.jpg">
+	</div>
 	</form>
 </body>
 </html>

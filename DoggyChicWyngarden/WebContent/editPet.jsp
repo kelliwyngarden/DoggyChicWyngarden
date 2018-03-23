@@ -5,15 +5,31 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Change Pet Information</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Satisfy">
 </head>
 <h1>Doggy Chic</h1>
 <body>
 	<form action = "editAppointmentServlet" method = "post">
+	<div class = "form">
 	Name: <input type = "text" name = "petName" value = "${petToEdit.petName}">
-	Weight: <input type = "text" name = "weight" value = "${petToEdit.weight}"><br/>
-	Has current vaccinations (Y/N): <input type = "text" name = "shots" value = "${petToEdit.hasShots}"><br/>
+	</div>
+	<br/>
+	<div class = "form">
+	Weight: <input type = "text" name = "weight" value = "${petToEdit.weight}">
+	</div>
+	<br/>
+	<div class = "form">
+	Has current vaccinations (Y/N): <input type = "text" name = "shots" value = "${petToEdit.hasShots}">
+	</div>
+	<br/>
 	<input type = "hidden" name = "id" value = "${petToEdit.id}">
+	<div class = "link-button">
 	<input type = "submit" value = "Save Pet Information" name = "doThisToItem">
+	</div>
+	<div class = "page-image">
+	<img src = "images/dogGroup2.jpg">
+	</div>
 	</form>
 </body>
 </html>

@@ -5,14 +5,24 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Change Customer Information</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Satisfy">
 </head>
 <h1>Doggy Chic</h1>
 <body>
 	<form action = "editAppointmentServlet" method = "post">
+	<div class = "form">
 	Name: <input type = "text" name = "firstName" value = "${customerToEdit.firstName}">
-		<input type = "text" name = "lastName" value = "${customerToEdit.lastName}"><br/>
-	Street Address: <input type = "text" name = "address" value = "${customerToEdit.address}"><br/>
-	City: <input type = "text" name = "city" value = "${customerToEdit.city}"><br/>
+		<input type = "text" name = "lastName" value = "${customerToEdit.lastName}">
+		</div>
+		<br/>
+		<div class = "form">
+	Street Address: <input type = "text" name = "address" value = "${customerToEdit.address}">
+	</div>
+	<div class = "form">
+	City: <input type = "text" name = "city" value = "${customerToEdit.city}">
+	</div>
+	<div class = "form">
 	State: <select name = "state">
 				<option value="" selected disabled hidden>State</option>
 				<option value="AL">Alabama</option>
@@ -66,11 +76,24 @@
 				<option value="WV">West Virginia</option>
 				<option value="WI">Wisconsin</option>
 				<option value="WY">Wyoming</option>
-			</select><br/>
-	Zip Code (five-digit): <input type="text" name = "zip" value = "${customerToEdit.zip}"><br/>
-	Phone Number (no hyphens): <input type = "text" name = "phoneNumber" value = "${customerToEdit.phoneNumber}"><br/>
+			</select>
+			</div>
+			<div class = "form">
+	Zip Code (five-digit): <input type="text" name = "zip" value = "${customerToEdit.zip}">
+	</div>
+	<br/>
+	<div class = "form">
+	Phone Number (no hyphens): <input type = "text" name = "phoneNumber" value = "${customerToEdit.phoneNumber}">
+	</div>
+	<br/>
 	<input type = "hidden" name = "id" value = "${customerToEdit.id}">
+	<br/>
+	<div class = "link-button">
 	<input type = "submit" value = "Save Customer Information" name = "doThisToItem">
+	</div>
+	<div class = "page-image">
+		<img src = "images/dogGroup2.jpg">
+		</div>
 	</form>
 </body>
 </html>

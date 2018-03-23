@@ -78,6 +78,8 @@ public class setCustomerServlet extends HttpServlet {
 			Pet p = ph.searchForPetById(tempId);
 			getServletContext().setAttribute("pet", p);
 			getServletContext().getRequestDispatcher("/makeAppointment.html").forward(request, response);
+		} else if (act.equals("New Pet")) {
+			getServletContext().getRequestDispatcher("/addPet.html").forward(request, response);
 		}
 	}
 

@@ -6,22 +6,36 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Select Your Pet</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Satisfy">
 </head>
 <h1>Doggy Chic</h1>
 <body>
-	<p>Please select correct pet:</p>
 	<form method = "post" action = "setCustomerServlet">
+	<div class = "form">
+	<p>Please select correct pet:</p>
 	<table>
 	<c:forEach items = "${requestScope.matchingPets}" var = "currentpet">
 	<tr>
 		<td><input type="radio" name="id" value="${currentpet.id}"></td>
 		<td>${currentpet.petName}</td>
+		<td>${', '}</td>
 		<td>${currentpet.weight}</td>
+		<td>${'lbs'}</td>
 	</tr>
 	</c:forEach>
 	</table>
+	</div>
+	<br/>
+	<div class = "link-button">
 	<input type = "submit" value = "Select Pet" name = "doThisToItem">
+	</div>
+	<div class = "link-button">
 	<input type = "submit" value = "New Pet" name = "doThisToItem">
+	</div>
+	<div class = "page-image">
+	<img src = "images/dogGroup2.jpg">
+	</div>
 	</form>
 </body>
 </html>

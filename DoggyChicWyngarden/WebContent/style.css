@@ -1,23 +1,77 @@
 @charset "ISO-8859-1";
 
 h1 {
+	background-color: #a7dbfa;
 	text-align: center;
-	font-family: 'Tangerine', 'Arial Black', 'Times New Roman';
-	font-size: 500px;
-	font-style: bold;
-	color: blue;
+	font-family: 'Satisfy', 'Arial Black', 'Times New Roman';
+	font-size: 125px;
+	color: #ffffff;
+	margin: 0px;
+	padding: 15px;
+}
+h2 {
+	font-family: 'Arial Black', sans serif;
+	font-size: 25px;
+	color: #000040;
+}
+h3 {
+	font-family: 'Arial Black', sans serif;
+	font-size: 18px;
+	color: #a7dbfa;
+	margin: 0px;
 }
 
 body {
+	background-color: #ffffff;
 	text-align: center;
+	font-family: 'Arial', sans serif;
 }
-a {
+
+body.index {
+	background: url(images/dogBlowDry.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.link-button {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    margin: 10px;
 }
 
-img {
+.nav-button {
+	text-align: left;
+	text-decoration: none;
+	margin: 30px;
+}
+
+.nav-button button {
+	font-size: 16px;
+    background-color: #a7dbfa;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.receipt {
+	text-align: left;
+	vertical-align: top;
+	margin: 30px;
+	display: inline-block;
+}
+
+.form {
+	margin: 13px 10px;
+	display: inline-block;
+}
+
+.index-image img {
 	text-align: center;
+	width: 1245px;
+}
+
+.page-image img {
+	width: 1225px;
+	vertical-align: bottom;
 }

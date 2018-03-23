@@ -153,10 +153,13 @@ public class editAppointmentServlet extends HttpServlet {
 			request.setAttribute("customer", customer);
 			
 			request.getRequestDispatcher("/viewAppointment.jsp").forward(request, response);
+		} else if (act.equals("Cancel Appointment")) {
+			Integer id = Integer.parseInt(request.getParameter("apptId"));
+			Appointment apptToDelete = ah.searchForAppointmentById(id);
+			ah.deleteAppointment(apptToDelete);
+			getServletContext().getRequestDispatcher("/cancelNotice.html").forward(request, response);
 		} else if (act.equals("Back to Menu")) {
 			getServletContext().getRequestDispatcher("/index.html").forward(request, response);
-		} else if (act.equals("Select Appointment")) {
-			
 		} else if (act.equals("New Appointment")) {
 			getServletContext().getRequestDispatcher("/startAppointment.html").forward(request, response);
 		}

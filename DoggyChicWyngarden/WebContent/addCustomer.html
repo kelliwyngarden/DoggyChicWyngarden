@@ -3,16 +3,18 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>New Customer Information</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Satisfy">
 </head>
 <h1>Doggy Chic</h1>
 <body>
 	<form action = "setCustomerServlet" method = "post">
-		<div>
+		<div class = "form">
 			Enter customer name: <input type = "text" name = "firstName" placeholder = "First">
 			<input type = "text" name = "lastName" placeholder = "Last">
 		</div>
 		<br/>
-		<div>
+		<div class = "form">
 			Enter customer address: <input type = "text" name = "address" placeholder = "Street address">
 			<input type = "text" name = "city" placeholder = "City">
 			<select name = "state">
@@ -72,11 +74,16 @@
 			<input type="text" name = "zip" pattern="[0-9]{5}" placeholder = "Zip">
 		</div>
 		<br/>
-		<div>
+		<div class = "form">
 			Enter customer phone number: <input type = "tel" name = "phoneNumber" placeholder = "XXX-XXX-XXXX">
 		</div>
 		<br/>
+		<div class = "link-button">
 		<input type = "submit" value = "Submit" name = "doThisToItem">
+		</div>
+		<div class = "page-image">
+		<img src = "images/dogGroup2.jpg">
+		</div>
 	</form>
 </body>
 </html>

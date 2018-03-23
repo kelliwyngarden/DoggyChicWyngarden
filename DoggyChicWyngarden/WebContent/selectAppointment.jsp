@@ -6,11 +6,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Select Your Appointment</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Satisfy">
 </head>
 <h1>Doggy Chic</h1>
 <body>
-	<p>Please select appointment to view:</p>
 	<form method = "post" action = "viewAppointmentServlet">
+	<div class = "form">
+	<p>Please select appointment to view:</p>
 	<table>
 	<c:forEach items = "${requestScope.matchingAppointments}" var = "currentappointment">
 	<tr>
@@ -21,9 +24,20 @@
 	</tr>
 	</c:forEach>
 	</table>
+	</div>
+	<br/>
+	<div class = "link-button">
 	<input type = "submit" value = "Select Appointment" name = "doThisToAppt">
+	</div>
+	<div class = "link-button">
 	<input type = "submit" value = "New Appointment" name = "doThisToAppt">
+	</div>
+	<div class = "link-button">
 	<input type = "submit" value = "Back to Menu" name = "doThisToAppt">
+	</div>
+	<div class = "page-image">
+	<img src = "images/dogGroup2.jpg">
+	</div>
 	</form>
 </body>
 </html>
