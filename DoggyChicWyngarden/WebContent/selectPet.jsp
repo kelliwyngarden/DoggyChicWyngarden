@@ -19,7 +19,7 @@
 	<tr>
 		<td><input type="radio" name="id" value="${currentpet.id}"></td>
 		<td>${currentpet.petName}</td>
-		<td>${', '}</td>
+		<td>${' '}</td>
 		<td>${currentpet.weight}</td>
 		<td>${'lbs'}</td>
 	</tr>

@@ -20,6 +20,7 @@
 		<td><input type="radio" name="id" value="${currentappointment.id}"></td>
 		<td>${currentappointment.customer.lastName}</td>
 		<td>${currentappointment.pet.petName}</td>
+		<td>${': '}</td>
 		<td>${currentappointment.appointmentDate}</td>
 	</tr>
 	</c:forEach>
